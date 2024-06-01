@@ -13,7 +13,7 @@
     <!-- 优质的 spring/boot/data/security/cloud 框架中文文档尽在 => https://springdoc.cn -->
     <groupId>com.wz</groupId>
     <artifactId>cloudapp</artifactId>
-    <version>0.0.2.hotfix</version>
+    <version>0.0.3</version>
     <name>cloudapp</name>
     <description>cloudapp project for Spring Boot</description>
     <properties>
