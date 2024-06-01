@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Order")
+@RequestMapping("/estore-api/order")
 public class OrderController {
     @Autowired
     private OrderDao orderDao;
