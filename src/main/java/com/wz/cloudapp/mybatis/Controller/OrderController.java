@@ -34,7 +34,7 @@ public class OrderController {
             Order order = (Order)redisUtils.get(id);
             if (null == order) {
                 order = orderDao.getOrderById(id);
-                redisUtils.set(id, order);
+                redisUtils.set(id, order, 300L);
             }
             if (null == order) {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
@@ -44,5 +44,10 @@ public class OrderController {
             e.printStackTrace();
         }
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+    }
+
+    @GetMapping("heartbeat")
+    public String heartbeat() {
+        return "Alive";
     }
 }
